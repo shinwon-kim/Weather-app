@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+import { IoSearch } from "react-icons/io5";
 import { fetchCurrentWeather, fetchForcastWeather } from './services/weatherAPI';
 import CurrentWeather from './components/CurrentWeather';
 import ForecastWeather from './components/ForecastWeather';
@@ -51,7 +52,10 @@ function App() {
     <div className={dark ? "app dark" : "app light"}>
       <div className="weather-cont">
         <h2>Weather App</h2>
-        <input type="text" placeholder="Enter city" value ={input} onChange={handleInput} onKeyDown={handleKeyDown}/>
+        <div className="search">
+          <input type="text" placeholder="Enter city" value ={input} onChange={handleInput} onKeyDown={handleKeyDown}/>
+          <IoSearch className="search-icon"/>
+        </div>
         <button onClick={handleClick} className="search-btn">Search</button>
         <CurrentWeather weather={weather}></CurrentWeather>
         <ForecastWeather forecast={forecast}></ForecastWeather>
