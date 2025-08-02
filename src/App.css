@@ -87,6 +87,7 @@ input {
   border-radius: 5px;
   color: white;
   background: #8C52FF;
+  cursor: pointer;
 }
 
 .search-btn:hover {
