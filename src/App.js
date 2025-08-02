@@ -9,6 +9,7 @@ function App() {
   const [forecast, setForecast] = useState();
   const [city, setCity] = useState("");
   const [input, setInput] = useState("");
+  const [dark, setDark] = useState(true);
 
   useEffect(()=>{
     const getWeatherData = async () =>{
@@ -41,8 +42,13 @@ function App() {
     }
   }
 
+  const handleToggle = () => {
+    setDark(!dark);
+    console.log(dark);
+  }
+
   return (
-    <>
+    <div className={dark ? "app dark" : "app light"}>
       <div className="weather-cont">
         <h2>Weather App</h2>
         <input type="text" placeholder="Enter city" value ={input} onChange={handleInput} onKeyDown={handleKeyDown}/>
@@ -50,7 +56,10 @@ function App() {
         <CurrentWeather weather={weather}></CurrentWeather>
         <ForecastWeather forecast={forecast}></ForecastWeather>
       </div>
-    </>
+      <button className={`toggle-btn ${dark ? "active" : ""}`} onClick={handleToggle}>
+        <div className="thumb"></div>
+      </button>
+    </div>
   );
 }
 

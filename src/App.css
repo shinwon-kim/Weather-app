@@ -9,6 +9,36 @@
   transition: background-color 0.3s ease;
 }
 
+.app.dark {
+  background-color: #292e46;
+  color: white;
+
+  .weather-cont {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  .toggle-btn {
+    background-color: #f0f5fe;
+  }
+  .thumb{
+    background: #292e46;
+  }
+}
+
+.app.light {
+  background-color: #f0f5fe;
+  color: #292e46;
+
+  .weather-cont {
+    background-color: rgba(219, 222, 225, 0.3);
+  }
+  .toggle-btn {
+    background-color: #292e46;
+  }
+  .thumb{
+    background: #f0f5fe;
+  }
+}
+
 .weather-cont {
   max-width: 450px;
   border-radius: 17px;
@@ -77,4 +107,30 @@ input {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.toggle-btn {
+  position: absolute;
+  cursor: pointer;
+  border-radius: 99px;
+  top: 10px;
+  right: 10px;
+  width:50px;
+  height: 30px;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.thumb{
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  right: 0;
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+}
+
+.toggle-btn.active .thumb {
+  transform: translateX(20px);
 }

@@ -1,5 +1,4 @@
 body {
-  background-color: #292e46;
   font-family: 'Segoe UI', 'Roboto', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   display: flex;
   align-items: center;
@@ -7,7 +6,6 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  color: white;
 }
 
 
