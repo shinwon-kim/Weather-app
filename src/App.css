@@ -126,12 +126,16 @@ input {
   justify-content: center;
 }
 
-.toggle-btn {
+.toggle-btn-wrapper {
   position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.toggle-btn {
+  position: relative;
   cursor: pointer;
   border-radius: 99px;
-  top: 10px;
-  right: 10px;
   width:50px;
   height: 30px;
   border: none;
@@ -146,8 +150,23 @@ input {
   right: 0;
   transition: transform 0.3s ease;
   transform: translateX(0);
+  z-index: 99;
 }
 
 .toggle-btn.active .thumb {
   transform: translateX(20px);
+}
+
+.sun, .moon {
+  color: #FFCE1B;
+  position: absolute;
+  font-size: 14px;
+}
+
+.sun {
+  left: 5px;
+}
+
+.moon {
+  right: 5px;
 }

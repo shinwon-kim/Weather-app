@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import { IoSearch } from "react-icons/io5";
+import { IoSearch, IoSunny, IoMoon } from "react-icons/io5";
 import { fetchCurrentWeather, fetchForcastWeather } from './services/weatherAPI';
 import CurrentWeather from './components/CurrentWeather';
 import ForecastWeather from './components/ForecastWeather';
@@ -60,9 +60,13 @@ function App() {
         <CurrentWeather weather={weather}></CurrentWeather>
         <ForecastWeather forecast={forecast}></ForecastWeather>
       </div>
-      <button className={`toggle-btn ${dark ? "active" : ""}`} onClick={handleToggle}>
-        <div className="thumb"></div>
-      </button>
+      <div className="toggle-btn-wrapper">
+        <button className={`toggle-btn ${dark ? "active" : ""}`} onClick={handleToggle}>
+          <IoSunny className="sun" />
+          <div className="thumb"></div>
+          <IoMoon className="moon" />
+        </button>
+      </div>
     </div>
   );
 }
