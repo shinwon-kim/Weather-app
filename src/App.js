@@ -33,10 +33,10 @@ function App() {
   }
 
   const handleClick = () => {
-    setCity(input);
+    setCity(input.trim());
     setInput("");
-
   }
+  
   const handleKeyDown = (e) => {
     if(e.key === "Enter"){
       handleClick();
