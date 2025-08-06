@@ -45,7 +45,6 @@ function App() {
 
   const handleToggle = () => {
     setDark(!dark);
-    console.log(dark);
   }
 
   return (

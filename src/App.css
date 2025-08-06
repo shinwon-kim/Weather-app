@@ -40,6 +40,7 @@
 }
 
 .weather-cont {
+  width: 100%;
   max-width: 450px;
   border-radius: 17px;
   display: flex;
@@ -47,6 +48,19 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
+}
+
+@media (max-width: 600px) {
+  .weather-cont {
+    padding: 15px;
+    max-width: 90%;
+  }
+}
+@media (max-width: 400px) {
+  .weather-cont {
+    padding: 10px;
+    max-width: 90%;
+  }
 }
 
 .weather-info {
@@ -113,6 +127,7 @@ input {
 
 .forecast-cont {
   margin-top: 45px;
+  width: 100%;
   max-width: 400px;
   overflow-x: auto;
   display: flex;
