@@ -56,7 +56,7 @@ function App() {
           <input type="text" placeholder="Enter city" value ={input} onChange={handleInput} onKeyDown={handleKeyDown}/>
           <IoSearch className="search-icon"/>
         </div>
-        <button onClick={handleClick} className="search-btn">Search</button>
+        <button type="button" onClick={handleClick} className="search-btn">Search</button>
         <CurrentWeather weather={weather}></CurrentWeather>
         <ForecastWeather forecast={forecast}></ForecastWeather>
       </div>
