@@ -10,12 +10,11 @@ function ForecastWeather({forecast}){
         const date = item.dt_txt.slice(10,-3);
         const weatherTemp = Math.round(item.main.temp-273.15);
         return(
-            <div key={index} className="forecast-item"> 
-                <p>{date}</p>
-                <img src={`https://openweathermap.org/img/wn/${weatherIcon}@2x.png`} alt={""}></img>
-                <p>{weatherTemp}°C</p>
-            </div>
-
+          <div key={index} className="forecast-item"> 
+              <p>{date}</p>
+              <img src={`https://openweathermap.org/img/wn/${weatherIcon}@2x.png`} alt={""}></img>
+              <p>{weatherTemp}°C</p>
+          </div>
         )
       })}
     </div>
